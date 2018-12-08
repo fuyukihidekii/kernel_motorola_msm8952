@@ -946,6 +946,7 @@ static int get_args(uint32_t kernel, struct smq_invoke_ctx *ctx)
 						+ rpra[i].buf.len));
 		}
 
+
 	}
 	inh = inbufs + outbufs;
 	for (i = 0; i < REMOTE_SCALARS_INHANDLES(sc); i++) {
@@ -956,6 +957,7 @@ static int get_args(uint32_t kernel, struct smq_invoke_ctx *ctx)
 		rpra[inh + i].h = lrpra[inh + i].h =
 			ctx->lpra[inh + i].h;
 	}
+
  bail:
 	return err;
 }
